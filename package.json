@@ -1,0 +1,18 @@
+{
+  "name": "nodeless",
+  "version": "1.0.0",
+  "main": "optimize.js",
+  "dependencies": {
+    "install": "^0.13.0",
+    "npm": "^7.5.4",
+    "sharp": "^0.27.1"
+  },
+  "scripts": {
+    "predeploy": "rm -rf node_modules/sharp && npm install --platform=linux --arch=x64 --target=14.15.4 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rm -rf node_modules/sharp && npm install sharp"
+  },
+  "author": "Orlando Neto",
+  "license": "ISC",
+  "description": ""
+}
